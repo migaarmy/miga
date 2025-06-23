@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="keywords" content="MIGA Army, meme-coin, NFT, Solana-, blockchain, whitepaper">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MIGA Army Whitepaper – A revolutionary meme coin and NFT movement on Solana, uniting global freedom lovers.">
+    <meta property="og:title" content="Title">
+    <meta property="og:image" content="/images/miga-og-image.jpg">
+    <meta property="keywords" content="description">
+  <title>MIGA Army Whitepaper</title>
+  <link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700;800=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-red: #e63946;
+      --primary-green: #2a9d3f;
+      --primary-dark: #1d3557;
+      --accent-gray: #f1f5f9;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+    }
+    .gradient-bg {
+      background: linear-gradient(135deg, rgba(42, 157, 63, 0.05), #ffffff, rgba(230, 57, 70, 0.05));
+    }
+    .paper {
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.08);
+      border-radius: 24px;
+      background: white;
+    }
+    .section {
+      scroll-margin-top: 120px;
+    }
+    .toc a {
+      transition: all 0.3s;
+      position: relative;
+    }
+    .toc a.active::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 2px;
+      background: var(--primary-red);
+    }
+    .toc a:hover {
+      color: var(--primary-red);
+      transform: translateX(4px);
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fadeInUp {
+      animation: fadeInUp 0.6s ease-out forwards;
+    }
+    .hover-scale {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .hover-scale:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+    .parallax {
+      transform: translateY(var(--parallax-offset));
+      transition: transform 0.5s ease-out;
+    }
+    .social-icon:hover svg {
+      transform: scale(1.2);
+      transition: transform 0.3s ease;
+    }
+    @media (max-width: 768px) {
+      .toc {
+        position: relative !important;
+        top: 0 !important;
+      }
+    }
+  </style>
+</head>
+<body class="gradient-bg min-h-screen text-gray-900">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white bg-opacity-95 backdrop-blur-xl shadow-lg">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-4">
+        <img src="logo-miga.png" alt="MIGA Army logo with vibrant red and green colors" class="w-12 h-12 rounded-lg" width="48" height="48">
+        <span class="font-extrabold text-3xl text-[var(--primary-red)] tracking-tight">MIGA Army</span>
+      </div>
+      <nav class="hidden md:flex gap-8 items-center">
+        <a href="#community" class="text-[var(--primary-dark)] font-semibold hover:text-[var(--primary-red)] transition">Join Us</a>
+      </nav>
+      <button class="md:hidden text-[var(--primary-dark)] focus:outline-none" aria-label="Toggle navigation menu">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="fixed inset-0 bg-[var(--primary-dark)] bg-opacity-90 z-40 hidden md:hidden" id="mobile-menu">
+    <div class="flex flex-col items-center justify-center h-full space-y-8">
+      <a href="#mission" class="text-white text-xl font-semibold hover:text-[var(--primary-red)] transition">Mission</a>
+      <a href="#about" class="text-white text-xl font-semibold hover:text-[var(--primary-red)] transition">About</a>
+      <a href="#tokenomics" class="text-white text-xl font-semibold hover:text-[var(--primary-red)] transition">Tokenomics</a>
+      <a href="#nft" class="text-white text-xl font-semibold hover:text-[var(--primary-red)] transition">NFT Vision</a>
+      <a href="#roadmap" class="text-white text-xl font-semibold hover:text-[var(--primary-red)] transition">Roadmap</a>
+      <a href="#community" class="text-white text-xl font-semibold hover:text-[var(--primary-red)] transition">Community</a>
+      <a href="#legal" class="text-white text-xl font-semibold hover:text-[var(--primary-red)] transition">Legal</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-4 sm:px-6 py-12 md:py-20 flex flex-col md:flex-row gap-12">
+    <!-- Sidebar / Table of Contents -->
+    <nav class="toc md:w-1/4 sticky top-24 self-start">
+      <h3 class="text-2xl font-bold text-[var(--primary-dark)] mb-6 animate-fadeInUp">Whitepaper</h3>
+      <ul class="space-y-4 text-gray-600 text-lg">
+        <li><a href="#mission" class="block hover:text-[var(--primary-red)] animate-fadeInUp">Mission</a></li>
+        <li><a href="#about" class="block hover:text-[var(--primary-red)] animate-fadeInUp">About</a></li>
+        <li><a href="#tokenomics" class="block hover:text-[var(--primary-red)] animate-fadeInUp">Tokenomics</a></li>
+        <li><a href="#nft" class="block hover:text-[var(--primary-red)] animate-fadeInUp">NFT Vision</a></li>
+        <li><a href="#roadmap" class="block hover:text-[var(--primary-red)] animate-fadeInUp">Roadmap</a></li>
+        <li><a href="#community" class="block hover:text-[var(--primary-red)] animate-fadeInUp">Community</a></li>
+        <li><a href="#legal" class="block hover:text-[var(--primary-red)] animate-fadeInUp">Legal</a></li>
+      </ul>
+    </nav>
+
+    <!-- Whitepaper Content -->
+    <article class="paper p-8 md:p-12 w-full max-w-3xl mx-auto animate-fadeInUp">
+      <!-- Title -->
+      <h1 class="text-4xl md:text-6xl font-extrabold text-[var(--primary-red)] mb-4 tracking-tight leading-tight">MIGA Army Whitepaper</h1>
+      <p class="text-xl text-gray-500 italic mb-10 leading-relaxed">Memes for a Freer Future – United by Hope, Powered by Community</p>
+
+      <!-- Sections -->
+      <section id="mission" class="section mb-16 parallax" style="--parallax-offset: 0px;">
+        <h2 class="text-3xl font-bold text-[var(--primary-green)] mb-6">Mission</h2>
+        <p class="text-gray-700 text-lg leading-relaxed">
+          MIGA Army is a global movement fueled by memes, blockchain, and unstoppable community spirit. Our mission is to unite freedom lovers and innovators, amplify voices for change, and build a digital nation where hope, humor, and human rights reign supreme.
+        </p>
+      </section>
+
+      <section id="about" class="section mb-16 parallax" style="--parallax-offset: 10px;">
+        <h2 class="text-3xl font-bold text-[var(--primary-green)] mb-6">About MIGA Army</h2>
+        <p class="text-gray-700 text-lg leading-relaxed">
+          Born from the era of digital protest and meme culture, MIGA Army transcends the concept of a meme coin. It’s a social phenomenon, a bridge across generations, and a beacon for those dreaming of a freer tomorrow.
+        </p>
+      </section>
+
+      <section id="tokenomics" class="section mb-16 parallax" style="--parallax-offset: 20px;">
+        <h2 class="text-3xl font-bold text-[var(--primary-green)] mb-6">Tokenomics</h2>
+        <ul class="list-disc ml-6 space-y-3 text-gray-700 text-lg">
+          <li>Network: Solana</li>
+          <li>Ticker: <strong>MIGA</strong></li>
+          <li>Total Supply: 100,000,000</li>
+          <li>Decimals: 9</li>
+          <li>No tax, no pre-mine, 100% community-driven</li>
+          <li>Fair launch, transparent distribution</li>
+        </ul>
+      </section>
+
+      <section id="nft" class="section mb-16 parallax" style="--parallax-offset: 30px;">
+        <h2 class="text-3xl font-bold text-[var(--primary-green)] mb-6">NFT Vision: The Heroes’ Hall</h2>
+        <p class="text-gray-700 text-lg leading-relaxed">
+          MIGA Army honors legendary Iranian heroes—past and present—through exclusive NFTs. The “Hall of Freedom” collection immortalizes icons of courage, resilience, and hope, from ancient kings to modern-day protestors. Each NFT is a story, a symbol, and a step toward global recognition.
+        </p>
+      </section>
+
+      <section id="roadmap" class="section mb-16 parallax" style="--parallax-offset: 40px;">
+        <h2 class="text-3xl font-bold text-[var(--primary-green)] mb-6">Roadmap</h2>
+        <ol class="list-decimal ml-6 space-y-3 text-gray-700 text-lg">
+          <li>Token launch & viral campaign</li>
+          <li>Community airdrop & meme challenges</li>
+          <li>Launch of NFT Heroes collection</li>
+          <li>Influencer collaborations & partnerships</li>
+          <li>DAO & decentralized governance</li>
+          <li>Supporting real-world social impact</li>
+        </ol>
+      </section>
+
+      <section id="community" class="section mb-16 parallax" style="--parallax-offset: 50px;">
+        <h2 class="text-3xl font-bold text-[var(--primary-green)] mb-6">Community</h2>
+        <p class="text-gray-700 text-lg leading-relaxed mb-8">
+          Join the MIGA Army across Telegram, Twitter, Discord, and Instagram. Our movement is powered by real people, united by memes, action, and a shared vision for a freer, fairer world.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="https://t.me/MIGAarmy" aria-label="Join MIGA Army on Telegram" class="bg-[var(--primary-green)] text-white px-6 py-3 rounded-lg hover-scale flex items-center gap-3 social-icon">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.07-1.02-.38-1.58-.71-.88-.52-1.37-.84-2.21-1.34-.99-.59-.35-1.3.22-2.05.15-.2 2.74-2.49 2.8-2.68.01-.03.01-.16-.08-.22-.09-.06-.21-.02-.3.02-.12.05-1.53 1.08-4.32 3.17-.33.25-.63.37-1.01.36-.55-.01-1.6-.31-2.38-.57-.95-.31-.96-.49-.17-.74.55-.17 3.4-1.24 4.5-1.65 2.2-.81 2.95-1.21 3.36-1.36.47-.17.76-.26.93-.17.13.07.16.22.05.72z"/></svg>
+            Telegram
+          </a>
+          <a href="https://twitter.com/MIGACommunity" aria-label="Follow MIGA Army on Twitter" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover-scale flex items-center gap-3 social-icon">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 001.88-2.38 8.6 8.6 0 01-2.72 1.04 4.28 4.28 0 00-7.28 3.9A12.15 12.15 0 013 4.79a4.27 4.27 0 001.32 5.7 4.24 4.24 0 01-1.94-.53v.05a4.28 4.28 0 003.44 4.19 4.3 4.3 0 01-1.93.07 4.28 4.28 0 004 2.97A8.58 8.58 0 012 19.54a12.1 12.1 0 006.57 1.92c7.88 0 12.18-6.53 12.18-12.18 0-.19 0-.37-.01-.56A8.7 8.7 0 0022.46 6z"/></svg>
+            Twitter
+          </a>
+          <a href="https://discord.com/invite/MIGACommunity" aria-label="Join MIGA Army on Discord" class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover-scale flex items-center gap-3 social-icon">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.22 4.2A19.53 19.53 0 0014.9 3a.3.3 0 00-.3.15c-.15.3-.3.6-.42.9a18.2 18.2 0 00-5.1 0c-.12-.3-.27-.6-.42-.9a.3.3 0 00-.3-.15 19.53 19.53 0 00-5.32 1.2A.45.45 0 003 4.65a20.25 20.25 0 00-1.35 14.1.45.45 0 00.45.6c1.05.15 2.1.27 3.15.36a.45.45 0 00.45-.3c.3-.75.57-1.5.75-2.25a.45.45 0 00-.3-.6 13.35 13.35 0 01-1.95-.9.45.45 0 01-.15-.6.45.45 0 01.6-.15c1.2.6 2.55 1.05 3.9 1.2.15 0 .3.15.3.3v2.25a.45.45 0 00.45.45c1.05.09 2.1.21 3.15.3a.45.45 0 00.45-.45v-2.25c0-.15.15-.3.3-.3 1.35-.15 2.7-.6 3.9-1.2a.45.45 0 01.6.15.45.45 0 01-.15.6c-.6.3-1.2.6-1.95.9a.45.45 0 00-.3.6c.18.75.45 1.5.75 2.25a.45.45 0 00.45.3c1.05-.09 2.1-.21 3.15-.36a.45.45 0 00.45-.6 20.25 20.25 0 00-1.35-14.1.45.45 0 00-.45-.45zM8.25 15.3c-1.2 0-2.25-1.05-2.25-2.4s1.05-2.4 2.25-2.4c1.2 0 2.25 1.05 2.25 2.4s-1.05 2.4-2.25 2.4zm7.5 0c-1.2 0-2.25-1.05-2.25-2.4s1.05-2.4 2.25-2.4c1.2 0 2.25 1.05 2.25 2.4s-1.05 2.4-2.25 2.4z"/></svg>
+            Discord
+          </a>
+          <a href="https://instagram.com/MIGACommunity" aria-label="Follow MIGA Army on Instagram" class="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-6 py-3 rounded-lg hover-scale flex items-center gap-3 social-icon">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.84.07 1.17.05 1.8.24 2.22.4.56.21.96.47 1.38.89.42.42.68.82.89 1.38.16.42.35 1.05.4 2.22.06 1.26.07 1.64.07 4.84s-.01 3.58-.07 4.84c-.05 1.17-.24 1.8-.4 2.22-.21.56-.47.96-.89 1.38-.42.42-.82.68-1.38.89-.42.16-1.05.35-2.22.4-1.26.06-1.64.07-4.84.07s-3.58-.01-4.84-.07c-1.17-.05-1.8-.24-2.22-.4-.56-.21-.96-.47-1.38-.89-.42-.42-.68-.82-.89-1.38-.16-.42-.35-1.05-.4-2.22-.06-1.26-.07-1.64-.07-4.84s.01-3.58.07-4.84c.05-1.17.24-1.8.4-2.22.21-.56.47-.96.89-1.38.42-.42.82-.68 1.38-.89.42-.16 1.05-.35 2.22-.4 1.26-.06 1.64-.07 4.84-.07zm0-2.16C8.74 0 8.33.01 7.05.07c-1.28.06-2.16.26-2.93.55-.89.33-1.65.81-2.4 1.56-.75.75-1.23 1.51-1.56 2.4-.29.77-.49 1.65-.55 2.93C0 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.28.26 2.16.55 2.93.33.89.81 1.65 1.56 2.4.75.75 1.51 1.23 2.4 1.56.77.29 1.65.49 2.93.55 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c1.28-.06 2.16-.26 2.93-.55.89-.33 1.65-.81 2.4-1.56.75-.75 1.23-1.51 1.56-2.4.29-.77.49-1.65.55-2.93.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.28-.26-2.16-.55-2.93-.33-.89-.81-1.65-1.56-2.4-.75-.75-1.51-1.23-2.4-1.56-.77-.29-1.65-.49-2.93-.55C15.67 0 15.26 0 12 0zM12 5.84c-3.37 0-6.16 2.79-6.16 6.16s2.79 6.16 6.16 6.16 6.16-2.79 6.16-6.16-2.79-6.16-6.16-6.16zm0 10.16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm6.4-10.4c0 .8-.65 1.44-1.44 1.44s-1.44-.65-1.44-1.44.65-1.44 1.44-1.44 1.44.65 1.44 1.44z"/></svg>
+            Instagram
+          </a>
+        </div>
+      </section>
+
+      <section id="legal" class="section mb-16 parallax" style="--parallax-offset: 60px;">
+        <h2 class="text-3xl font-bold text-[var(--primary-green)] mb-6">Legal & Disclaimer</h2>
+        <p class="text-gray-700 text-lg leading-relaxed">
+          MIGA Army is a decentralized, community-led project and not an investment or security. Participation is at your own risk. Always conduct your own research. This whitepaper is for informational purposes only and does not constitute financial advice.
+        </p>
+      </section>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[var(--primary-dark)] text-gray-200 py-12">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+        <div>
+          <p class="text-lg font-semibold">MIGA Army</p>
+          <p class="text-sm mt-2">© 2025 MIGA Army – Powered by memes & dreams.</p>
+        </div>
+        <div class="flex gap-6">
+          <a href="#privacy" class="text-gray-400 hover:text-white transition text-sm">Privacy Policy</a>
+          <a href="#terms" class="text-gray-400 hover:text-white transition text-sm">Terms of Service</a>
+          <a href="#contact" class="text-gray debut text-[#2a9d3f] hover:text-white transition text-sm">Contact</a>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+<script> // Toggle Mobile Menu
+    const menuButton = document.querySelector('button.md\\:hidden');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Smooth Scroll for Anchor Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) => {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        window.scrollTo({
+          top: targetElement.offsetTop - 80,
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Highlight Active TOC Link
+    const tocLinks = document.querySelectorAll('.toc a');
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          tocLinks.forEach(link => link.classList.remove('active'));
+          const id = entry.target.getElementById('id');
+          const activeLink = document.querySelector(`.toc a[href="#${id}"]`);
+          if (activeLink) activeLink.classList.add('active');
+        }
+      }));
+    }, { rootMargin: '-100px 0px -50% 0px' });
+
+    sections.forEach(section => observer.observe(section.section));
+
+    // Parallax Effect
+    const parallaxElements = document.querySelectorAll('.parallax');
+    window.addEventListener('scroll', () => {
+      parallaxElements.forEach(el => {
+        const offset = parseFloat(el.style.getPropertyValue('--parallax-offset'));
+        const scrollPos = window.scrollY / 3;
+        el.style.transform = `translateY(${offset + scrollPos}px)`;
+      });
+    });
+  </script>
+
+</body>
+</html>
